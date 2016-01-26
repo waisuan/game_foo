@@ -53,6 +53,7 @@ def print_i_didnt_quite_catch_that():
 
 def get_starting_point():
     print "Choose a starting point."
+    # Not yet implemented
 
 
 print """
