@@ -1,0 +1,4 @@
+#NAME,DIALOGUE,GIFT
+BOB,Ever since RISE happened, people have been afraid of change. How sad...,#
+JANE,Hi! You look like you could use this...,POTION+
+JACKSON,*grumble* What da hell do you want?!|What's the matter?,Your life,Nothing|GET OUTTA MY HOUSE!,GO TO HELL!,THEN, GET OUTTA MY HOUSE!,#
