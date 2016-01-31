@@ -4,6 +4,11 @@ class Player:
         self.name = name
         self.gender = gender
         self.race = race
+        self.backpack = []
+        self.equipment = []
+        self.hp
+        self.mp
+        self.skills
 
     def get_p_name(self):
         return self.name
