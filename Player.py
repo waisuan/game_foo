@@ -3,12 +3,15 @@ class Player:
     def __init__(self, name, gender, race):
         self.name = name
         self.gender = gender
-        self.race = race
+        self.race = race['Title']
         self.backpack = []
-        self.equipment = []
-        self.hp
-        self.mp
-        self.skills
+        self.weapon = race['Weapon']
+        self.armor = race['Armor']
+        self.attk = race['Attk']
+        self.defe = race['Def']
+        self.hp = race['Hp']
+        self.mp = race['Mp']
+        self.skills = race['Skills']
 
     def get_p_name(self):
         return self.name
@@ -19,5 +22,32 @@ class Player:
     def get_p_race(self):
         return self.race
 
+    def get_p_backpack(self):
+        return self.backpack
+
+    def get_p_weapon(self):
+        return self.weapon
+
+    def get_p_armor(self):
+        return self.armor
+
+    def get_p_attk(self):
+        return self.attk
+
+    def get_p_def(self):
+        return self.defe
+
+    def get_p_hp(self):
+        return self.hp
+
+    def get_p_mp(self):
+        return self.mp
+
+    def get_p_skills(self):
+        return self.skills
+
     def __str__(self):
-        return "[NAME: %s | GENDER: %s | RACE: %s]" % (self.name, self.gender, self.race)
+        return "[NAME: %s | GENDER: %s | RACE: %s | HP: %s | MP: %s | Weapon: %s | Armor: %s | Attk: %s" \
+               " | Def: %s | Skills %s]" % \
+               (self.name, self.gender, self.race, self.hp, self.mp, self.weapon, self.armor, self.attk, self.defe,
+                self.skills)

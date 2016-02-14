@@ -1,4 +1,5 @@
 from Player import Player
+from PlayerRaceParser import PlayerRaceParser
 
 
 def get_player_name():
@@ -21,7 +22,8 @@ def get_player_gender():
 
 
 def get_player_race():
-    player_race_options = ["War Orc", "Paladin", "Arcanist", "Lancer", "Hunter"]
+    player_race_parser = PlayerRaceParser()
+    player_race_options = player_race_parser.get_race_titles()
     print "Please pick a RACE before we can officially begin!"
     index = 1
     for race in player_race_options:
@@ -33,12 +35,12 @@ def get_player_race():
             or player_race == "":
         player_race = raw_input("I choose: ")
         if player_race.isdigit() and (1 <= int(player_race) <= len(player_race_options)):
-            return player_race
+            return (player_race_parser.get_races())[player_race_options[int(player_race) - 1]]
         elif player_race.replace(" ", "").isalpha() and player_race != "":
             player_race = player_race.title()
             for race in player_race_options:
                 if player_race == race:
-                    return player_race
+                    return (player_race_parser.get_races())[player_race]
         player_race = "null"
         print_i_didnt_quite_catch_that()
 
